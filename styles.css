@@ -1,3 +1,22 @@
+
+
+.logo {
+  /* 1. Make the image smaller (80% width) */
+    width: 40%!important; 
+    height: auto; /* Adjust height as needed */
+    
+    /* 2. Center the image horizontally */
+    margin: 100px auto; 
+    
+    
+    
+    /* 4. Round the corners for a modern look */
+    border-radius: 15px;
+    
+    /* 5. Keep proportions correct */
+    height: auto;
+    object-fit: contain;
+}
 /* Targets the images inside the carousel */
 .carousel-item img {
     /* 1. Make the image smaller (80% width) */
@@ -5,7 +24,7 @@
     height: auto; /* Adjust height as needed */
     
     /* 2. Center the image horizontally */
-    margin: 40px auto; 
+    margin: 100px auto; 
     
     /* 3. Add the border */
     border: 8px solid #f8f9fa; /* Light grey/white border */
@@ -17,10 +36,16 @@
     /* 5. Keep proportions correct */
     height: auto;
     object-fit: contain;
+
+    
+
 }
+
+
 
 body {
     background-color: ;
+    margin: 0
 }
 
 /* If you want the carousel area to match the background */
@@ -39,7 +64,8 @@ h2, .featurette-heading {
 .marketing .col-lg-4, 
 .featurette {
     text-align: center;
-    background-color:
+    background-color: 
+    
 }
 
 .container-fluid {
@@ -51,13 +77,25 @@ h2, .featurette-heading {
 
 .logo {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto ;
     width: 550px; /* Adjust as needed */
     height: auto;
+    padding-top: 80px;
 }
 
 svg.featurette-image {
  border-radius: 20px; /* styles only for this SVG */
+}
+
+
+
+
+footer.container-fluid {
+   
+    background-color: lightcyan;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    
 }
 
 
