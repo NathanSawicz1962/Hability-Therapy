@@ -17,15 +17,19 @@ p {
   width: 80% !important;
 }       
 
-.logo {
-    width: 70%;
-    max-width: 70%;
+img {
+
+    flex: 1 1 auto;
+    width: 50%;
+    height: auto;   
+    /
     height: auto;
-    display: block;
-    margin: 20px auto;
+    object-fit: contain;
+    display: block  !important ;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 3%;
 }
-
-
 
 p {
     text-align: center !important;
@@ -42,11 +46,3 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
-
-
-
-
-
-
-
-
