@@ -1,1 +1,43 @@
+h1 {
+    text-align: center !important;
+    padding: 90px;
+}
+
+.container-fluid {
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+ img {
+ flex: 1 1 auto;
+    width: 50%;
+    height: auto;   
+    /
+    height: auto;
+    object-fit: contain;
+    display: block  !important ;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 3%;
+}
+
+p {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 80% !important;
+    font-size: 1.5em; /* Adjust as needed */
+    color: #333; /* Darker text color for better readability */
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: lightcyan;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
 
