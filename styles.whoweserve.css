@@ -3,6 +3,7 @@ h1 {
     padding: 90px;
 }
 
+
 .container-fluid {
     background-color: lightcyan;
     padding: 20px;
@@ -10,19 +11,21 @@ h1 {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+p {
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 80% !important;
+}       
 
- img {
- flex: 1 1 auto;
-    width: 50%;
-    height: auto;   
-    /
+.logo {
+    width: 70%;
+    max-width: 70%;
     height: auto;
-    object-fit: contain;
-    display: block  !important ;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 3%;
+    display: block;
+    margin: 20px auto;
 }
+
+
 
 p {
     text-align: center !important;
@@ -39,5 +42,11 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
+
+
+
+
+
 
 
