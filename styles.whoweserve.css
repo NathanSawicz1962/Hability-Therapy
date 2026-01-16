@@ -90,3 +90,21 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
+/* Remove bullets from all navbars and footers */
+.nav,
+.nav ul,
+footer ul {
+    list-style: none;  /* Remove bullets */
+    padding-left: 0;   /* Remove default indentation */
+    margin-left: 0;    /* Remove extra left margin */
+}
+
+/* Optional: ensure nav links stay horizontal */
+.nav li,
+footer ul li {
+    display: inline-block;
+    margin-right: 10px; /* spacing between links */
+}
+
+
