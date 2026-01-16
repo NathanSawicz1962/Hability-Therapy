@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: ;
+    
 }
 
 /* If you want the carousel area to match the background */
@@ -45,7 +45,7 @@ h2, .featurette-heading {
 .marketing .col-lg-4, 
 .featurette {
     text-align: center;
-    background-color:
+    
 }
 
 .container-fluid {
@@ -56,7 +56,7 @@ h2, .featurette-heading {
 }
 
 .logo {
-    display: block
+    display: block;
     margin: 0 auto;
     width: 5px; /* Adjust as needed */
     height: auto;
@@ -65,8 +65,7 @@ h2, .featurette-heading {
 img {
  flex: 1 1 auto;
     width: 50%;
-    height: auto;   
-    /
+
     height: auto;
     object-fit: contain;
     display: block  !important ;
@@ -90,4 +89,5 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
 
