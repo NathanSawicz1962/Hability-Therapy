@@ -1,88 +1,78 @@
-h1 {
-    text-align: center !important;
-    padding: 90px;
+
+/* 1. BODY - Standard white background */
+body {
+    background-color: white !important;
 }
 
-.container-fluid {
-    background-color: lightcyan;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    /* Ensure the container itself doesn't overflow */
-    width: 100%;
-    box-sizing: border-box;
+/* 2. NAVBAR - Force Lightcyan */
+/* This targets the navbar and the container inside it */
+.navbar, .bg-body-tertiary {
+    background-color: lightcyan !important;
+}
+
+/* 3. SERVICES SECTION - Remove background and shadow */
+.services-provided {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 20px 0;
+}
+
+/* 4. FOOTER - Force Lightcyan */
+footer {
+    background-color: lightcyan !important;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+}
+
+/* --- Content Styling --- */
+
+h1 {
+    text-align: center;
+    padding: 60px 20px;
 }
 
 img {
-    /* On mobile, images should be wider to be visible; on desktop, they stay 50% */
-    flex: 1 1 auto;
     width: 50%;
-    height: auto;   
-    /
     height: auto;
     object-fit: contain;
-    display: block  !important ;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
     border-radius: 3%;
 }
 
 p {
     text-align: center !important;
-    margin: 40px 40px !important;
-    
-    /* FIX: Width should be wider on mobile (95%) and narrower on desktop (80%) */
-    width: clamp(80%, 95%, 100%) !important;
-    
-    /* FIX: Fluid font size. 
-       Starts at 1.1rem on small phones and grows to 1.7rem on big screens */
-    font-size: clamp(1.1rem, 4vw, 1.7rem) !important;
-    
+    margin: 20px auto !important;
+    width: clamp(80%, 90%, 95%) !important;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem) !important;
     color: #333;
-    padding: 15px; /* Reduced slightly for mobile screens */
-    
-    /* PREVENT CUT OFF: Forces long words to wrap */
+    padding: 15px;
     overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-
-    padding: 20px 20px; /* Add more padding for better spacing on larger screens */
-    
-    
-}
-
-p {
-    /* Keeps text from hitting the edges of the lightcyan box */
-    padding: 20px; 
-    
-    /* Centers the text block itself */
-    width: 90% !important; 
-    margin: 0 auto !important; 
-    
-    /* Makes the actual words align in the middle */
-    text-align: center !important; 
-    
-    /* Responsive font size from our previous step */
-    font-size: clamp(1.1rem, 4vw, 1.7rem) !important;
-    
-    /* Essential for mobile: wraps long words so they don't break symmetry */
-    overflow-wrap: break-word;
+    line-height: 1.6;
 }
 
 /* Extra safety for very small phones */
 @media (max-width: 480px) {
-    .container-fluid {
-        padding: 10px; /* More room for text */
+    img {
+        width: 90%;
     }
     p {
         padding: 10px;
-        line-height: 1.4; /* Tighter line height for small screens */
+        width: 95% !important;
     }
 }
 
-footer {
-    padding: 20px 0;
-    background-color: lightcyan;
-    text-align: center;
-    border-top: 1px solid #ccc;
+/* This targets the container-fluid specifically when it's inside the main/services area */
+main .container-fluid, 
+section.services-provided,
+.service-details {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* This ensures the body behind it is definitely white */
+body {
+    background-color: white !important;
 }
