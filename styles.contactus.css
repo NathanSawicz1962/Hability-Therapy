@@ -1,52 +1,8 @@
-/* Targets the images inside the carousel */
-.carousel-item img {
-    /* 1. Make the image smaller (80% width) */
-    width: 40%!important; 
-    height: auto; /* Adjust height as needed */
-    
-    /* 2. Center the image horizontally */
-    margin: 40px auto; 
-    
-    /* 3. Add the border */
-    border: 8px solid #f8f9fa; /* Light grey/white border */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Adds depth */
-    
-    /* 4. Round the corners for a modern look */
-    border-radius: 15px;
-    
-    /* 5. Keep proportions correct */
-    height: auto;
-    object-fit: contain;
-}
-
-body {
-    background-color: ;
-}
-
-/* If you want the carousel area to match the background */
-.carousel {
-    background-color: ;
-    margin: auto;
-}
-
 h1 {
     text-align: center !important;
     padding: 90px;
 }
 
-/* Centers all h2 headings and their following paragraphs */
-h2, .featurette-heading {
-    text-align: center;
-    width: 100%;
-}
-
-
-/* If you also want the lead text and buttons centered */
-.marketing .col-lg-4, 
-.featurette {
-    text-align: center;
-    background-color:
-}
 
 .container-fluid {
     background-color: lightcyan;
@@ -55,15 +11,15 @@ h2, .featurette-heading {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.logo {
-    display: block
-    margin: 0 auto;
-    width: 5px; /* Adjust as needed */
-    height: auto;
+p {
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 80% !important;
+}       
 
-}
 img {
- flex: 1 1 auto;
+
+    flex: 1 1 auto;
     width: 50%;
     height: auto;   
     /
