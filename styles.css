@@ -20,7 +20,7 @@
 /* Targets the images inside the carousel */
 .carousel-item img {
     /* 1. Make the image smaller (80% width) */
-    width: 60%;  
+    width: 50%;  
     height: auto; /* Adjust height as needed */
     
     /* 2. Center the image horizontally */
@@ -97,6 +97,7 @@ footer.container-fluid {
     border-top: 1px solid #ccc;
     
 }
+
 
 
 
