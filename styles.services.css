@@ -1,0 +1,63 @@
+/* Header styling */
+h1 {
+    text-align: center !important;
+    padding: 60px 20px; /* Reduced from 90px to fit better on mobile */
+}
+
+/* Target the actual section class from your HTML */
+.services-provided {
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Image styling - Fixed the stray '/' error */
+img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    display: block !important;
+    margin: 20px auto !important; /* Centers the image and adds vertical spacing */
+    border-radius: 3%;
+}
+
+/* Paragraph styling - Merged duplicate blocks */
+p {
+    text-align: center !important;
+    margin: 20px auto !important; /* Centers the block */
+    width: clamp(80%, 90%, 95%) !important; /* Responsive width */
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem) !important; /* Fluid text size */
+    color: #333;
+    padding: 15px;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+}
+
+/* Highlights the service titles (the bold text) */
+p strong {
+    display: block; /* Puts the title on its own line */
+    color: #005a5a; /* A darker teal to match the theme */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+    img {
+        width: 80%; /* Images get wider on phones */
+    }
+    h1 {
+        padding: 40px 10px;
+    }
+}
+
+/* Footer styling */
+footer {
+    padding: 20px 0;
+    background-color: lightcyan;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
