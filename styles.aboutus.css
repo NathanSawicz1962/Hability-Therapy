@@ -18,16 +18,11 @@ p {
 }       
 
 img {
-
-    flex: 1 1 auto;
-    width: 60%;
-    height: auto;   
-    /
+    width: 50%;
     height: auto;
     object-fit: contain;
-    display: block  !important ;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    display: block !important;
+    margin: 20px auto !important;
     border-radius: 3%;
 }
 
@@ -46,6 +41,7 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
 
 
 
