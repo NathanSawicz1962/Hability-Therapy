@@ -4,25 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intake Form</title>
-
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  >
-
-  <!-- Intake Form Custom CSS -->
-  <link rel="stylesheet" href="style.intakeform.css">
 </head>
-
 <body>
-
-<!-- ===================== NAVBAR ===================== -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Hability Therapy</a>
+    <a class="navbar-brand" href="#"></a>
 
     <button class="navbar-toggler" type="button"
       data-bs-toggle="collapse"
@@ -39,10 +25,10 @@
           <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="aboutus.html">About Us</a>
+          <a class="nav-link" href="htmlAboutUs">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contactus.html">Contact Us</a>
+          <a class="nav-link" href="htmlContactUs">Contact Us</a>
         </li>
       </ul>
       <span class="navbar-text">Hability Therapy</span>
@@ -50,11 +36,37 @@
   </div>
 </nav>
 
-<!-- ===================== INTAKE FORM ===================== -->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="htmlAboutUs">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="htmlContactUs">Contact Us</a>
+        </li>
+      </ul>
+      <span class="navbar-text">Hability Therapy</span>
+    </div>
+  </div>
+</nav>
+</body>
+
+
+</html>
+
+
+
+
 <div class="form-wrapper">
   <form id="intakeForm" class="intake-form" novalidate>
 
     <h1 class="form-title">Intake Form</h1>
+
+    <link rel="stylesheet" href="style.intakeform.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Name -->
     <div class="form-group">
@@ -72,40 +84,27 @@
 
     <!-- Contact Number -->
     <div class="form-group">
-      <input
-        type="tel"
-        id="contactNumber"
-        placeholder=" "
-        required
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <input type="tel" id="contactNumber" placeholder=" " required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
       <label for="contactNumber">Contact Number</label>
-      <span class="error-message">
-        Please enter a valid phone number (xxx-xxx-xxxx).
-      </span>
+      <span class="error-message">Please enter a valid phone number (xxx-xxx-xxxx).</span>
     </div>
 
     <!-- Preferred Contact Method -->
     <div class="form-group">
       <select id="contactMethod" required>
-        <option value="" disabled selected>
-          Select preferred contact method
-        </option>
+        <option value="" disabled selected>Select preferred contact method</option>
         <option value="Phone call">Phone call</option>
         <option value="Email">Email</option>
         <option value="Text message">Text message</option>
       </select>
       <label for="contactMethod">Preferred Contact Method</label>
-      <span class="error-message">
-        Please select a contact method.
-      </span>
+      <span class="error-message">Please select a contact method.</span>
     </div>
 
     <!-- Insurance Type -->
     <div class="form-group">
       <select id="insuranceType" required>
-        <option value="" disabled selected>
-          Select insurance type
-        </option>
+        <option value="" disabled selected>Select insurance type</option>
         <option value="Private Pay">Private Pay</option>
         <option value="Commercial Insurance">Commercial Insurance</option>
         <option value="Medicaid / NJ Familycare">Medicaid / NJ Familycare</option>
@@ -113,9 +112,7 @@
         <option value="Not Sure">Not Sure</option>
       </select>
       <label for="insuranceType">Insurance Type</label>
-      <span class="error-message">
-        Please select an insurance type.
-      </span>
+      <span class="error-message">Please select an insurance type.</span>
     </div>
 
     <!-- Optional Message -->
@@ -124,7 +121,7 @@
       <label for="message">Brief message (Optional)</label>
     </div>
 
-    <!-- Services -->
+    <!-- Services of Interest -->
     <h3 class="section-title">Services of Interest</h3>
     <div class="checkbox-group">
       <label><input type="checkbox" name="services" value="Occupational Therapy"> Occupational Therapy</label>
@@ -136,29 +133,31 @@
       <label><input type="checkbox" name="services" value="Not Sure / Need More Information"> Not Sure / Need More Information</label>
     </div>
 
-    <!-- Consent -->
-    <div class="form-group consent">
-      <div class="consent-box">
-        <input type="checkbox" id="consentCheckbox" name="consent" required>
-        <label for="consentCheckbox">
-          I consent to be contacted by Hability Therapy regarding services.
-        </label>
-      </div>
-      <span class="error-message">
-        You must provide consent before submitting.
-      </span>
-    </div>
+   <!-- Consent -->
+<div class="form-group consent">
+  <div class="consent-box">
+    <input
+      type="checkbox"
+      id="consentCheckbox"
+      name="consent"
+      required
+    >
+    <label for="consentCheckbox">
+      I consent to be contacted by Hability Therapy regarding services.
+    </label>
+  </div>
+  <span class="error-message">You must provide consent before submitting.</span>
+</div>
+
 
     <!-- Submit -->
     <button type="submit" class="submit-btn">Submit</button>
-
   </form>
 </div>
 
-<!-- ===================== FORM VALIDATION ===================== -->
 <script>
   const form = document.getElementById('intakeForm');
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', function(e) {
     if (!form.checkValidity()) {
       e.preventDefault();
       form.classList.add('was-validated');
@@ -166,31 +165,25 @@
   });
 </script>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="bg-info-subtle">
   <div class="container py-4">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-body-secondary">About Us</a></li>
-      <li class="nav-item"><a href="services.html" class="nav-link px-2 text-body-secondary">Services</a></li>
-      <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
-    </ul>
-    <p class="text-center text-body-secondary">
-      © <span id="year"></span> Hability Therapy, Inc
-    </p>
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3"> 
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+         <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-body-secondary">About Us</a></li> 
+         <li class="nav-item"><a href="services.html" class="nav-link px-2 text-body-secondary">Services</a></li> 
+         <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-body-secondary">Contact Us</a></li> 
+         <li class="nav-item"><a href="locationserved.html" class="nav-link px-2 text-body-secondary">Location Served</a></li>
+        <li class="nav-item"><a href="whoweserve.html" class="nav-link px-2 text-body-secondary">Who We Serve</a></li>
+        </ul>
+    <p class="text-center text-body-secondary">© <span id="year"></span> Hability Therapy, Inc</p>
   </div>
+  <script>
+    // This gets the current year from the user's system clock
+    const currentYear = new Date().getFullYear();
+    
+    // This finds the HTML element with the id "year" and updates its text
+    document.getElementById('year').textContent = currentYear;
+</script>
+  
 </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
-<!-- Bootstrap JS -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-  crossorigin="anonymous">
-</script>
-
-</body>
-</html>
