@@ -1,4 +1,15 @@
 /* === Form Container === */
+
+
+.form-wrapper .container-fluid {
+  background-color: lightcyan;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -9,12 +20,11 @@
   box-sizing: border-box;
 }
 
-.container-fluid {
-    background-color: lightcyan;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.navbar-toggler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }
+
 
 /* === Form Card === */
 .intake-form {
@@ -182,3 +192,64 @@
     font-size: 1.6rem;
   }
 }
+
+/* FORCE Bootstrap navbar toggler to work */
+.navbar-toggler {
+  pointer-events: auto !important;
+  z-index: 1050;
+}
+
+.navbar-toggler-icon {
+  background-image: var(--bs-navbar-toggler-icon-bg) !important;
+}
+
+
+
+
+
+
+.submit-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.consent input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  accent-color: #5c6bc0;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 10px;
+
+
+}
+
+.consent {
+  display: flex;
+  justify-content: center; /* centers the checkbox + label horizontally */
+  margin-bottom: 25px;
+}
+
+.consent label {
+  display: flex;
+  align-items: center; /* keeps checkbox and text aligned vertically */
+  gap: 10px; /* adds space between checkbox and text */
+  font-size: 0.95rem;
+
+  
+}
+
+.consent {
+  display: flex;
+  justify-content: center; /* centers the checkbox + label container */
+  margin-bottom: auto;
+  margin-top: 55px;
+}
+
+.consent input[type="checkbox"] {
+  display: block;       /* makes the checkbox a block-level element */
+  margin: 50px auto;       /* centers the checkbox inside its container */
+}
+
