@@ -41,7 +41,7 @@
         <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       </ul>
-      <span class="navbar-text">Hability Therapy</span>
+      <span class="navbar-text"></span>
     </div>
   </div>
 </nav>
@@ -53,86 +53,99 @@
 
 <!-- FORM -->
 <div class="form-wrapper">
-  <form id="intakeForm" class="intake-form" novalidate>
+  <form
+  id="intakeForm"
+  class="intake-form"
+  action="https://formspree.io/f/mgokqbyy"
+  method="POST"
+  novalidate
+>
 
-    <h1 class="form-title">Intake Form</h1>
 
-    <div class="form-group">
-      <input type="text" id="clientName" placeholder=" " required>
-      <label for="clientName">Name of Client or Caregiver</label>
-      <span class="error-message">Please enter your name.</span>
-    </div>
+   <h1 class="form-title">Intake Form</h1>
 
-    <div class="form-group">
-      <input type="email" id="clientEmail" placeholder=" " required>
-      <label for="clientEmail">Email Address</label>
-      <span class="error-message">Please enter a valid email.</span>
-    </div>
+<div class="form-group">
+  <input type="text" id="clientName" name="name" placeholder=" " required>
+  <label for="clientName">Name of Client or Caregiver</label>
+  <span class="error-message">Please enter your name.</span>
+</div>
 
-    <div class="form-group">
-      <input
-        type="tel"
-        id="contactNumber"
-        placeholder=" "
-        required
-        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
-      >
-      <label for="contactNumber">Contact Number</label>
-      <span class="error-message">Use xxxxxxxxxx format.</span>
-    </div>
+<div class="form-group">
+  <input type="email" id="clientEmail" name="email" placeholder=" " required>
+  <label for="clientEmail">Email Address</label>
+  <span class="error-message">Please enter a valid email.</span>
+</div>
+
 
     <div class="form-group">
-      <select id="contactMethod" required>
-        <option value="" disabled selected></option>
-        <option>Phone call</option>
-        <option>Email</option>
-        <option>Text message</option>
-      </select>
-      <label for="contactMethod">Preferred Contact Method</label>
-      <span class="error-message">Select a contact method.</span>
-    </div>
+  <select id="contactMethod" name="contact_method" required>
+    <option value="" disabled selected></option>
+    <option>Phone call</option>
+    <option>Email</option>
+    <option>Text message</option>
+  </select>
+  <label for="contactMethod">Preferred Contact Method</label>
+  <span class="error-message">Select a contact method.</span>
+</div>
 
-    <div class="form-group">
-      <select id="insuranceType" required>
-        <option value="" disabled selected></option>
-        <option>Private Pay</option>
-        <option>Commercial Insurance</option>
-        <option>Medicaid / NJ Familycare</option>
-        <option>DDD / Waiver Services</option>
-        <option>Not Sure</option>
-      </select>
-      <label for="insuranceType">Insurance Type</label>
-      <span class="error-message">Select an insurance type.</span>
-    </div>
+<div class="form-group">
+  <select id="insuranceType" name="insurance_type" required>
+    <option value="" disabled selected></option>
+    <option>DDD / Waiver Services</option>
+    <option>Commercial Insurance</option>
+    <option>Medicaid / NJ Familycare</option>
+    <option>Private Pay</option>
+    <option>Not Sure</option>
+  </select>
+  <label for="insuranceType">Insurance Type</label>
+  <span class="error-message">Select an insurance type.</span>
+</div>
 
-    <div class="form-group">
-      <textarea id="message" placeholder=" "></textarea>
-      <label for="message">Brief message (Optional)</label>
-    </div>
+<div class="form-group">
+  <select id="Location" name="location" required>
+    <option value="" disabled selected></option>
+    <option>Middlesex County</option>
+    <option>Monmouth County</option>
+    <option>Somerset County</option>
+    <option>Virtual Visit</option>
+    <option>Not Sure</option>
+  </select>
+  <label for="Location">Location</label>
+  <span class="error-message">Select a location.</span>
+</div>
 
-    <h3 class="section-title">Services of Interest</h3>
-    <div class="checkbox-group">
-      <label><input type="checkbox"> Occupational Therapy</label>
-      <label><input type="checkbox"> Life Skills / Independent Living</label>
-      <label><input type="checkbox"> Community Integration</label>
-      <label><input type="checkbox"> Sensory Regulation Support</label>
-      <label><input type="checkbox"> Caregiver Support & Training</label>
-      <label><input type="checkbox"> Wheelchair Evaluation</label>
-      <label><input type="checkbox"> Not Sure</label>
-    </div>
+<div class="form-group">
+  <textarea id="message" name="message" placeholder=" "></textarea>
+  <label for="message">Brief message (Optional)</label>
+</div>
 
-   <div class="form-group consent">
-  <input type="checkbox" id="consentCheckbox" required>
+<h3 class="section-title">Services of Interest</h3>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="services[]" value="Occupational Therapy"> Occupational Therapy</label>
+  <label><input type="checkbox" name="services[]" value="Life Skills / Independent Living"> Life Skills / Independent Living</label>
+  <label><input type="checkbox" name="services[]" value="Community Integration"> Community Integration</label>
+  <label><input type="checkbox" name="services[]" value="Sensory Regulation Support"> Sensory Regulation Support</label>
+  <label><input type="checkbox" name="services[]" value="Caregiver Support & Training"> Caregiver Support & Training</label>
+  <label><input type="checkbox" name="services[]" value="Wheelchair Evaluation"> Wheelchair Evaluation</label>
+  <label><input type="checkbox" name="services[]" value="Not Sure"> Not Sure</label>
+</div>
+
+<div class="form-group consent">
+  <input type="checkbox" id="consentCheckbox" name="consent" required>
   <label for="consentCheckbox">
     I consent to be contacted by Hability Therapy regarding services.
   </label>
   <span class="error-message">Consent is required.</span>
+
+
 </div>
+  
 
+<button type="submit" class="submit-btn">Submit</button>
 
-    <button type="submit" class="submit-btn">Submit</button>
   </form>
-</div>
+  </div>
+   
 
 <!-- FOOTER -->
 <footer class="bg-info-subtle">
@@ -142,6 +155,8 @@
       <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-body-secondary">About Us</a></li>
       <li class="nav-item"><a href="services.html" class="nav-link px-2 text-body-secondary">Services</a></li>
       <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+      <li class="nav-item"><a href="whoweserve.html" class="nav-link px-2 text-body-secondary">Services</a></li>
+      <li class="nav-item"><a href="intakeform.html" class="nav-link px-2 text-body-secondary">Location Served</a></li>
     </ul>
     <p class="text-center text-body-secondary">
       © <span id="year"></span> Hability Therapy, Inc
