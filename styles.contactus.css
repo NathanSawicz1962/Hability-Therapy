@@ -46,3 +46,35 @@ footer {
     text-align: center;
     border-top: 1px solid #ccc;
 }
+
+p {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2c2c2c;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Scroll reveal from left */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: transform, opacity;
+}
+
+/* When revealed */
+.reveal-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile: gentler motion */
+@media (max-width: 768px) {
+  .reveal-left {
+    transform: translateX(-30px);
+    transition-duration: 0.6s;
+  }
+}
