@@ -1,5 +1,3 @@
-
-
 /* =========================
    GLOBAL
 ========================= */
@@ -93,4 +91,52 @@ footer.container-fluid {
 
 svg.featurette-image {
     border-radius: 20px;
+}
+
+
+
+/* Scroll reveal base */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: transform, opacity;
+}
+
+/* Activated state */
+.reveal-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Mobile: softer movement */
+@media (max-width: 768px) {
+    .reveal-left {
+        transform: translateX(-30px);
+        transition-duration: 0.6s;
+    }
+}
+/* Scroll reveal base */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: transform, opacity;
+}
+
+.reveal-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.navbar.reveal-left {
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.navbar.reveal-left.show {
+    transform: translateX(0);
+    opacity: 1;
 }
