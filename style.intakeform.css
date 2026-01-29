@@ -111,6 +111,7 @@
   color: #e74c3c;
   margin-top: 5px;
   display: none;
+  text-align: center;
 }
 
 .was-validated input:invalid ~ .error-message,
@@ -241,15 +242,39 @@
   
 }
 
+
+
 .consent {
   display: flex;
-  justify-content: center; /* centers the checkbox + label container */
-  margin-bottom: auto;
-  margin-top: 55px;
+  flex-direction: column;  /* stack checkbox and error message */
+  align-items: center;     /* center horizontally */
+  margin: 25px 0 0 0;
+}
+
+.consent label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  margin: -20px;
 }
 
 .consent input[type="checkbox"] {
-  display: block;       /* makes the checkbox a block-level element */
-  margin: 50px auto;       /* centers the checkbox inside its container */
+  width: 18px;
+  height: 18px;
+  accent-color: #5c6bc0;
+  cursor: pointer;
 }
 
+.consent .error-message {
+  font-size: 0.8rem;
+  color: #e74c3c;
+  min-height: 1.2em;       /* reserve vertical space */
+  text-align: center;
+  visibility: hidden;       /* hidden by default */
+  margin-top: 5px;
+}
+
+.was-validated .consent input:invalid ~ .error-message {
+  visibility: visible;
+}
