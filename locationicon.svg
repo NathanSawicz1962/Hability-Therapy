@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="Location">
+  <!-- pin -->
+  <path d="M32 6c-10 0-18 8-18 18 0 14 18 32 18 32s18-18 18-32c0-10-8-18-18-18Z" fill="#E9F6FA" stroke="#32245A" stroke-width="3" stroke-linejoin="round"></path>
+
+  <!-- house -->
+  <path d="M24 28l8-6 8 6v10H24V28Z" fill="#FFFFFF" stroke="#32245A" stroke-width="3" stroke-linejoin="round"></path>
+
+  <!-- door -->
+  <path d="M30 38v-6h4v6" fill="#2398D1"></path>
+</svg>
