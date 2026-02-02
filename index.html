@@ -54,7 +54,7 @@
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="./occupational image 4.jpg" class="d-block w-100 " alt="">
+      <img src="./occupational image 34.png" class="d-block w-100 " alt="">
     </div>
     <div class="carousel-item">
       <img src="./ChatGPT Image Jan 29, 2026, 08_06_24 PM.png" class="d-block w-100" alt="...">
@@ -122,8 +122,8 @@
   viewBox="0 0 500 500"
   preserveAspectRatio="xMidYMid slice"
 >
-  =
-</svg>
+  
+                                     </svg>
 
                               </svg>
                                  </div> </div>
@@ -133,8 +133,22 @@
                               
                                  
                                  </div> </div>
+<hr class="featurette-divider">
 
+<div class="row featurette"> <div class="col-md-6 order-md-2"> <h2 class="featurette-heading fw-normal lh-1">Reclaim your day<span class="text-body-secondary"> with Hability Therapy</span></h2> <p class="lead">Occupational therapy isn’t just about recovery; it’s about reclaiming your day. Whether it’s the frustration of a physical limitation, the challenge of sensory overload, or the desire to help a loved one navigate life’s daily tasks with confidence, the journey to a more functional life starts here.<br>
+</br>
 
+Why Choose Hability Therapy?
+Personalized Strategy: You aren't just a patient; you are an individual with unique goals, and our intake process ensures Hability Therapy tailors your care specifically to the life you want to lead.
+<br></br>
+Empowerment through Action: We provide practical, real-world tools that turn everyday challenges into manageable stepping stones toward independence.
+<br></br>
+Expert Connection: Completing this form is the fastest way to bridge the gap between where you are now and the professional support you need to move better and live stronger.
+
+Your Path to Independence
+By filling out this intake form, you provide the Hability Therapy team with the roadmap needed to help you master the activities that matter most to you. From fine motor coordination to self-care and community integration, we support every aspect of your "functional self".
+<br></br>
+Ready to see what’s possible? Take five minutes to fill out the intake form with us, and let’s start building your pathway to a more fulfilling life together.</p> </div> <div class="col-md-5 order-md-1">
 <!-- FORM -->
 <div class="form-wrapper">
 <form
@@ -233,15 +247,11 @@
 <button type="submit" class="submit-btn">Submit</button>
 
   </form>
-  </div>
-   
+  </div></text></svg> </div> </div>
 
+<hr class="featurette-divider">
 
-
-
-
-
-
+                                 
                                  
 <footer class="bg-info-subtle">
   <div class="container py-4">
@@ -255,6 +265,9 @@
         <li class="nav-item"><a href="whoweserve.html" class="nav-link px-2 text-body-secondary">Who We Serve</a></li>
         <li class="nav-item"><a href="intakeform.html" class="nav-link px-2 text-body-secondary">Intake Form</a></li>
         </ul>
+         <p class="text-center text-body-secondary" style="font-size: 0.9rem;">
+    <strong>Empowering Abilities, Achieving Goals</strong>
+  </p>
   <p class="text-center text-body-secondary">
   <strong>© <span id="year"></span> Hability Therapy, Inc</strong>
 </p>
@@ -296,6 +309,41 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".reveal-left, .reveal-right").forEach(el => {
     observer.observe(el);
   });
+});
+</script>
+
+
+<script>
+document.getElementById("intakeForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+
+  if (!form.checkValidity()) {
+    form.classList.add("was-validated");
+    return;
+  }
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://formspree.io/f/mgokqbyy", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      // 🚀 YOU control the redirect now
+      window.location.href = "index.html";
+    } else {
+      alert("Submission failed. Please try again.");
+    }
+  } catch (err) {
+    alert("Network error. Please try again later.");
+  }
 });
 </script>
 
