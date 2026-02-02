@@ -612,6 +612,7 @@ svg.featurette-image {
 @media (max-width: 576px) {
   .intake-form {
     padding: 30px 20px;
+    
   }
 
   .form-title {
@@ -703,3 +704,60 @@ svg.featurette-image {
 .was-validated .consent input:invalid ~ .error-message {
   visibility: visible;
 }
+
+image[href*="occupational therapy image 24"] {
+  
+   padding: 50px;
+}
+
+
+
+
+
+
+/* Container for the image to ensure it matches the form width */
+.form-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-image-container img {
+    width: 100%;
+    max-height: 400px; /* Adjust height for laptop view */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 20px; /* Matches your form's rounded corners */
+}
+
+/* Ensure the form doesn't exceed the image width */
+.intake-form {
+    background: sea burlywood;
+    margin-top: 10px; /* Slight overlap or adjustment if desired */
+}
+.col-md-6 {
+    background-color: lightskyblue;
+}
+
+    
+
+
+
+
+
+
+
+.lead {
+
+    text-align: center !important;
+    font-size: 1.5em; /* Adjust as needed */
+    color: #333; /* Darker text color for better readability */
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+
+
+
+
+
+
+
