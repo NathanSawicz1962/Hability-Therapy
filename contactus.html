@@ -34,14 +34,14 @@ footer { padding: 20px 0; background-color: lightcyan; text-align: center; borde
         <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       </ul>
-      <span class="navbar-text"></span>
+      
     </div>
   </div>
 </nav>
 
 <!-- PAGE CONTENT -->
 <h1 class="reveal-left">Contact Us</h1>
-<img src="occupational image 16.jpeg" alt="Occupational Therapy" class="reveal-left">
+<img src="./occupational image 35.jpg" alt="Occupational Therapy" class="reveal-left">
 <p class="reveal-left">
   We would love to hear from you! Whether you have questions about our services, want to schedule an appointment, or just want to say hello, please feel free to reach out to us. <br>
   Email: admin@habilitytherapy.com <br>
@@ -59,9 +59,44 @@ footer { padding: 20px 0; background-color: lightcyan; text-align: center; borde
     <li class="nav-item"><a href="whoweserve.html" class="nav-link px-2 text-body-secondary">Who We Serve</a></li>
     <li class="nav-item"><a href="intakeform.html" class="nav-link px-2 text-body-secondary">Intake Form</a></li>
   </ul>
- <p class="text-center text-body-secondary" style="font-size: 0.9rem;">
+ 
+    <p class="text-center text-body-secondary" style="font-size: 0.9rem;">
+    <strong>Empowering Abilities, Achieving Goals</strong>
+  </p>
+
+  <p class="text-center text-body-secondary" style="font-size: 0.9rem;">
   <strong>© <span id="year"></span>  Hability Therapy, Inc</strong>
 </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Year -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Scroll Reveal -->
+<script>
+  const elements = document.querySelectorAll('.reveal-left');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+ 
+
 </footer>
 
 <!-- Scripts -->
@@ -94,5 +129,3 @@ window.addEventListener('load', revealElements);
 
 </body>
 </html>
-
-
