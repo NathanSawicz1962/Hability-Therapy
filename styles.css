@@ -440,7 +440,7 @@ svg.featurette-image {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  min-height: 100vh;
+  min-height: 60vh;
   background: linear-gradient(145deg,#e0e7ff,#f8f9fa);
   box-sizing: border-box;
 }
@@ -753,6 +753,7 @@ image[href*="occupational therapy image 24"] {
     color: #333; /* Darker text color for better readability */
     padding: 20px; /* Add some padding for better spacing */
 }
+
 
 
 
