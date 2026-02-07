@@ -764,13 +764,223 @@ image[href*="occupational therapy image 24"] {
 }
 
 
+/* === 1. GLOBAL & RESET === */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* === 2. WRAPPER (No height limit) === */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Starts form at top */
+  padding: 40px 20px;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #e0e7ff, #f8f9fa);
+  box-sizing: border-box;
+}
+
+/* === 3. FORM CARD (Scroll Removed) === */
+.intake-form {
+  background: #fff;
+  padding: 25px;            /* Reduced padding to save height */
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 420px;         /* Narrower width to look sleeker */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: visible !important; /* FORCES SCROLL OFF */
+  max-height: none !important;  /* REMOVES HEIGHT LIMIT */
+}
+
+/* === 4. COMPACT ELEMENTS === */
+.form-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;      /* Reduced from 25px to prevent overflow */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 12px;       /* Slimmer input height */
+  border-radius: 12px;
+  border: 2px solid #dfe4ff;
+  font-size: 0.95rem;
+  background: #f7f8fa;
+  outline: none;
+}
+
+/* Floating Labels Fix */
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #777;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: 0px;
+  font-size: 0.75rem;
+  background: #fff;
+  padding: 0 4px;
+  color: #5c6bc0;
+}
+
+/* === 5. CHECKBOXES (Compact Grid) === */
+.section-title {
+  font-size: 1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for clarity, tight gap */
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  accent-color: #5c6bc0;
+}
+
+/* === 6. SUBMIT BUTTON === */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5c6bc0, #7986cb);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+}
 
 
+/* === Wrapper & Reset === */
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 10px;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #e0e7ff, #f8f9fa);
+}
 
+/* === The Shrunken Card === */
+.intake-form {
+  background: #fff;
+  padding: 15px 20px;       /* Tightened internal padding */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 550px;         /* Slightly wider to accommodate 2 columns */
+  overflow: visible;        /* Removes the scrollbar */
+}
 
+.form-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
+/* === Two-Column Grid Logic === */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Puts two inputs on one line */
+  gap: 10px;                     /* Tight gap between side-by-side inputs */
+  margin-bottom: 8px;            /* Drastically reduced from 25px */
+}
 
+.form-group {
+  position: relative;
+  width: 100%;
+}
 
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #dfe4ff;
+  background: #f7f8fa;
+}
 
+/* Compact Floating Labels */
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: #777;
+  transition: 0.2s;
+  pointer-events: none;
+}
 
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select:not([value=""]) + label {
+  top: 0;
+  font-size: 0.7rem;
+  background: #fff;
+  padding: 0 3px;
+  color: #5c6bc0;
+}
 
+/* === Services Section (3 Columns) === */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns saves massive height */
+  gap: 0px;
+  margin: 10px 0;
+}
+
+.checkbox-group label {
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px ;
+  background: #5c6bc0;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
