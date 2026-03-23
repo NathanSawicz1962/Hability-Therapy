@@ -377,13 +377,31 @@
     background: var(--white);
   }
 
+  /* Default: vertical stacking for mobile/tablets */
+.about-inner {
+  display: flex;
+  flex-direction: column; /* vertical on small screens */
+  gap: 2rem; /* spacing between card and text */
+  align-items: flex-start;
+}
+
+/* Desktop / Laptop: horizontal layout */
+@media (min-width: 1024px) { /* adjust if needed */
   .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: 1100px;
+    flex-direction: row;           /* horizontal layout */
+    justify-content: space-between; /* space between card and text */
+    align-items: flex-start;       /* align top edges */
   }
+
+  /* Optional: make the card a fixed width, text takes remaining space */
+  .about-inner > div:first-child {
+    flex: 0 0 250px; /* card width */
+  }
+
+  .about-inner > div:last-child {
+    flex: 1; /* text fills remaining space */
+  }
+}
 
   .about-avatar {
     width: 220px; height: 220px;
